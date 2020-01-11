@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Using The Client Manually | Villus</title>
+    <meta name="description" content="A small and fast GraphQL client for Vue.js">
+    
+    
+    <link rel="preload" href="/villus/assets/css/0.styles.d948701f.css" as="style"><link rel="preload" href="/villus/assets/js/app.511d6170.js" as="script"><link rel="preload" href="/villus/assets/js/2.68c53dfc.js" as="script"><link rel="preload" href="/villus/assets/js/12.084e4d1b.js" as="script"><link rel="prefetch" href="/villus/assets/js/10.f7b8707b.js"><link rel="prefetch" href="/villus/assets/js/11.232e1b65.js"><link rel="prefetch" href="/villus/assets/js/13.e3a99420.js"><link rel="prefetch" href="/villus/assets/js/3.43f644cf.js"><link rel="prefetch" href="/villus/assets/js/4.f51ed457.js"><link rel="prefetch" href="/villus/assets/js/5.eb85da2b.js"><link rel="prefetch" href="/villus/assets/js/6.8d0950e6.js"><link rel="prefetch" href="/villus/assets/js/7.67bed607.js"><link rel="prefetch" href="/villus/assets/js/8.4b24d115.js"><link rel="prefetch" href="/villus/assets/js/9.7227b536.js">
+    <link rel="stylesheet" href="/villus/assets/css/0.styles.d948701f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/villus/" class="home-link router-link-active"><!----> <span class="site-name">Villus</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/villus/" class="nav-link">Home</a></div><div class="nav-item"><a href="/villus/guide/" class="nav-link router-link-active">Guide</a></div> <a href="https://github.com/logaretm/villus" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/villus/" class="nav-link">Home</a></div><div class="nav-item"><a href="/villus/guide/" class="nav-link router-link-active">Guide</a></div> <a href="https://github.com/logaretm/villus" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Guide</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/villus/guide/" class="sidebar-link">Introduction</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/villus/guide/#features" class="sidebar-link">Features</a></li><li class="sidebar-sub-header"><a href="/villus/guide/#compatibility" class="sidebar-link">Compatibility</a></li><li class="sidebar-sub-header"><a href="/villus/guide/#alternatives" class="sidebar-link">Alternatives</a></li></ul></li><li><a href="/villus/guide/client.html" class="sidebar-link">Client</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/villus/guide/client.html#composition-api" class="sidebar-link">Composition API</a></li><li class="sidebar-sub-header"><a href="/villus/guide/client.html#provider-component" class="sidebar-link">Provider Component</a></li><li class="sidebar-sub-header"><a href="/villus/guide/client.html#next-steps" class="sidebar-link">Next Steps</a></li></ul></li><li><a href="/villus/guide/queries.html" class="sidebar-link">Queries</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/villus/guide/queries.html#usequery" class="sidebar-link">useQuery</a></li><li class="sidebar-sub-header"><a href="/villus/guide/queries.html#query" class="sidebar-link">Query</a></li><li class="sidebar-sub-header"><a href="/villus/guide/queries.html#graphql-tag" class="sidebar-link">graphql-tag</a></li><li class="sidebar-sub-header"><a href="/villus/guide/queries.html#variables" class="sidebar-link">Variables</a></li><li class="sidebar-sub-header"><a href="/villus/guide/queries.html#manual-fetching" class="sidebar-link">Manual Fetching</a></li><li class="sidebar-sub-header"><a href="/villus/guide/queries.html#caching" class="sidebar-link">Caching</a></li><li class="sidebar-sub-header"><a href="/villus/guide/queries.html#watching-variables" class="sidebar-link">Watching Variables</a></li><li class="sidebar-sub-header"><a href="/villus/guide/queries.html#other-properties" class="sidebar-link">Other properties</a></li><li class="sidebar-sub-header"><a href="/villus/guide/queries.html#suspense" class="sidebar-link">Suspense</a></li></ul></li><li><a href="/villus/guide/mutations.html" class="sidebar-link">Mutations</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/villus/guide/mutations.html#passing-variables" class="sidebar-link">Passing Variables</a></li><li class="sidebar-sub-header"><a href="/villus/guide/mutations.html#other-properties" class="sidebar-link">Other Properties</a></li></ul></li><li><a href="/villus/guide/headers.html" class="sidebar-link">Headers</a></li><li><a href="/villus/guide/subscriptions.html" class="sidebar-link">Subscriptions</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/villus/guide/subscriptions.html#subscription-component" class="sidebar-link">Subscription Component</a></li><li class="sidebar-sub-header"><a href="/villus/guide/subscriptions.html#usesubscription" class="sidebar-link">useSubscription</a></li></ul></li><li><a href="/villus/guide/using-the-client-manually.html" class="active sidebar-link">Using The Client Manually</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/villus/guide/using-the-client-manually.html#executing-queries" class="sidebar-link">Executing Queries</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="using-the-client-manually"><a href="#using-the-client-manually" aria-hidden="true" class="header-anchor">#</a> Using The Client Manually</h1> <p>You don't have to use any of the functions/components to make use of <code>villus</code>. You can still use the core client manually to run arbitrary GraphQL queries and still get most of the benefits like caching queries and batching requests.</p> <h2 id="executing-queries"><a href="#executing-queries" aria-hidden="true" class="header-anchor">#</a> Executing Queries</h2> <p>First you need to build the client instance, which can be done using <code>createClient</code> function exported by <code>villus</code>:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> createClient <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'villus'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> client <span class="token operator">=</span> <span class="token function">createClient</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  url<span class="token punctuation">:</span> <span class="token string">'your_graphql_endpoint'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>Then you can run queries, mutations or subscriptions using any of their corresponding methods.</p> <h3 id="querying"><a href="#querying" aria-hidden="true" class="header-anchor">#</a> Querying</h3> <p>You can execute queries using <code>executeQuery</code> method on the client instance:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> createClient <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'villus'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> client <span class="token operator">=</span> <span class="token function">createClient</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  url<span class="token punctuation">:</span> <span class="token string">'your_graphql_endpoint'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+client
+  <span class="token punctuation">.</span><span class="token function">executeQuery</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    query<span class="token punctuation">:</span> <span class="token string">'your query'</span><span class="token punctuation">,</span>
+    variables<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token comment">// any variables</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>response <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// process the response</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>You can also specify a custom cache policy per query execution by passing a <code>cachePolicy</code> property, by default it will follow whatever policy configured in the <code>createClient</code> function.</p> <div class="language-js extra-class"><div class="highlight-lines"><br><br><br><br><br><br><br><br><br><br><br><br><div class="highlighted"> </div><br><br><br><br><br></div><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> createClient <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'villus'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> client <span class="token operator">=</span> <span class="token function">createClient</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  url<span class="token punctuation">:</span> <span class="token string">'your_graphql_endpoint'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+client
+  <span class="token punctuation">.</span><span class="token function">executeQuery</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    query<span class="token punctuation">:</span> <span class="token string">'your query'</span><span class="token punctuation">,</span>
+    variables<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token comment">// any variables</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    cachePolicy<span class="token punctuation">:</span> <span class="token string">'network-only'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>response <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// process the response</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="mutations"><a href="#mutations" aria-hidden="true" class="header-anchor">#</a> Mutations</h3> <p>You can execute mutations using <code>executeMutation</code> method on the client instance:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> createClient <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'villus'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> client <span class="token operator">=</span> <span class="token function">createClient</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  url<span class="token punctuation">:</span> <span class="token string">'your_graphql_endpoint'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+client
+  <span class="token punctuation">.</span><span class="token function">executeMutation</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    query<span class="token punctuation">:</span> <span class="token string">'your query'</span><span class="token punctuation">,</span>
+    variables<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token comment">// any variables</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>response <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// process the response</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>You can make use of <code>async/await</code> as <code>executeQuery</code> and <code>executeMutation</code> both return a native Promise.</p></div> <h3 id="subscriptions"><a href="#subscriptions" aria-hidden="true" class="header-anchor">#</a> Subscriptions</h3> <p>Subscriptions are trickier, because they are more <strong>event-driven</strong>, so you cannot wait for them to execute like queries or mutations. Because of this, the <code>executeSubscription</code> method returns an <strong>Observable</strong> that allows you respond to incoming data.</p> <p>The <code>useSubscription</code> function and <code>Subscription</code> component offer a great abstraction for dealing with subscriptions but you can still execute your own arbitrary subscriptions without resorting to either:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> createClient <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'villus'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> SubscriptionClient <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'subscriptions-transport-ws'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> subscriptionClient <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SubscriptionClient</span><span class="token punctuation">(</span><span class="token string">'ws://localhost:4001/graphql'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> client <span class="token operator">=</span> <span class="token function">createClient</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  url<span class="token punctuation">:</span> <span class="token string">'http://localhost:4000/graphql'</span><span class="token punctuation">,</span>
+  subscriptionForwarder<span class="token punctuation">:</span> op <span class="token operator">=&gt;</span> subscriptionClient<span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span>op<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> observable <span class="token operator">=</span> client<span class="token punctuation">.</span><span class="token function">executeSubscription</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  query<span class="token punctuation">:</span> <span class="token string">'your subscription query'</span><span class="token punctuation">,</span>
+  variables<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// any variables</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+observable<span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function">next</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// handle incoming data</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment">// eslint-disable-next-line</span>
+  <span class="token function">error</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Handle errors</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>Don't forget to set the <code>subscriptionForwarder</code> option on the client, which is a function that returns an observable.</p></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/villus/guide/subscriptions.html" class="prev">Subscriptions</a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/villus/assets/js/app.511d6170.js" defer></script><script src="/villus/assets/js/2.68c53dfc.js" defer></script><script src="/villus/assets/js/12.084e4d1b.js" defer></script>
+  </body>
+</html>
